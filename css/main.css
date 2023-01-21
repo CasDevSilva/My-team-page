@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+:root{
+    --font-primary: 'PT Serif', serif;
+    --font-secondary: 'Poppins', sans-serif;
+    --weight-normal: 400;
+    --weight-bold: 700;
+    --size-hight: 36px;
+    --size-medium: 24px;
+    --size-normal: 18px;
+    --size-mini: 14px;
+    --size-small: 10px;
+}
+html {
+    box-sizing: border-box;
+}
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    overflow-x: hidden;
+    padding: var(--size-medium);
+}
+h1{
+    font-size: var(--size-hight);
+    font-weight: var(--weight-bold);
+    line-height: var(--size-hight);
+}
+h2{
+    font-size: var(--size-normal);
+    font-weight: var(--weight-bold);
+}
+h3, p{
+    font-size: var(--size-mini);
+}
+h3{
+    font-weight: 600;
+    line-height: 21px;
+}
+h4{
+    font-size: var(--size-small);
+    font-weight: var(--weight-normal);
+    transform: rotate(90deg);
+    position: absolute;
+    width: 100px;
+    top: 45px;
+    right: -45px;
+}
+h2, h4{
+    text-transform: uppercase;
+}
+h1, h4{
+    font-family: var(--font-primary);
+}
+h2, p, h3{
+    font-family: var(--font-secondary);
+}
+p{
+    line-height: 20px;
+    font-weight: var(--weight-normal);
+}
+
+.info__page, .about__page, .gallery{
+    display: flex;
+}
+
+.info__page, .about__page{
+    flex-direction: column;
+}
+.info__page{
+    gap: 32px;
+}
+.about__page{
+    gap: 10px;
+}
+.gallery{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 32px 0;
+}
+img{
+    width: 90%;
+    max-width: 100%;
+}
+.card{
+    width: 45%;
+}
+.card:nth-of-type(2n){
+    padding: 32px 0;
+}
+.card__img{
+    position: relative;
+}
+footer, footer a{
+    color: #A9A9A9;
+}
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+}
+footer p{
+    text-align: center;
+}
+
+@media all and (min-width: 600px){
+    body{
+        padding: 70px var(--size-medium) var(--size-medium);
+    }
+    .info__page{
+        flex-direction: row;
+    }
+    h1{
+        width: 45%;
+    }
+    .about__page{
+        width: 55%;
+    }
+    .card{
+        width: 32%;
+    }
+    .card:nth-of-type(2n){
+        padding:0;
+    }
+    .card:nth-of-type(2), .card:nth-of-type(5){
+        padding: 32px 0;
+    }
+    h4{
+        font-size: 12px;
+        width: 120px;
+        top: 54px;
+        right: -50px;
+    }
+    h3, h2, p{
+        font-size: var(--size-normal);
+    }
+    .about__page p{
+        max-width: 95%;
+    }
+}
+
+@media all and (min-width: 780px){
+    body{
+        padding: 70px 144px var(--size-medium);
+    }
+    .gallery{
+        gap: 5%;
+        padding: 72px 0;
+    }
+    .card{
+        width: 30%;
+    }
+    .card:nth-of-type(2), .card:nth-of-type(5){
+        padding: 72px 0;
+    }
+    .about__page p{
+        max-width: 70%;
+    }
+}
